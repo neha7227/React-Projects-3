@@ -28,7 +28,7 @@ setObj(newObj);
 
  return (
     <div className="App">
-{(welcomeMsg)?<p>"Welcome, user!"</p>:
+{(welcomeMsg)?<p>"Welcome, {obj.username}!"</p>:
 (<form className="form-container" onSubmit={handleSubmit}>
 <h1>Login Page</h1>
 {(invalidMsg)?<p>"Invalid username or password"</p>:""}

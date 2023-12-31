@@ -33,7 +33,7 @@ function App() {
         <form className="form-container" onSubmit={handleSubmit}>
 
           {invalidMsg ? <p>Invalid username or password</p> : ""}
-          <label>
+          <label htmlFor="username">
             Username:
             <input
               id="username"
@@ -45,7 +45,7 @@ function App() {
             ></input>
           </label>
 
-          <label>
+          <label htmlFor="password">
             Password:
             <input
               id="password"

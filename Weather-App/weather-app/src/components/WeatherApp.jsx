@@ -50,21 +50,21 @@ const WeatherApp = () => {
       {weatherData && (
         <div className="weather-cards">
           {/* <h2>Weather Information for {city}</h2> */}
-          <div className="card">
+          <div className="weather-card">
             Temperature:
             <div>{weatherData.temperature}°C </div>
           </div>
 
-          <div className="card">
+          <div className="weather-card">
             Humidity:
             <div>{weatherData.humidity}%</div>
           </div>
-          <div className="card">
+          <div className="weather-card">
             Condition:
             <div>{weatherData.condition}</div>
           </div>
 
-          <div className="card">
+          <div className="weather-card">
             Wind Speed:
             <div>{weatherData.windSpeed} kph</div>
           </div>

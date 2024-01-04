@@ -48,7 +48,7 @@ const WeatherApp = () => {
       {loading && <p>Loading data...</p>}
 
       {weatherData && (
-        <div className="weather-card">
+        <div className="weather-cards">
           {/* <h2>Weather Information for {city}</h2> */}
           <div className="card">
             Temperature:

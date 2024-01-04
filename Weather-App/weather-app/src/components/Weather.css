@@ -1,0 +1,41 @@
+.app-body{
+background-color: #76b3db;
+height: 100vh;
+}
+.weather-card{
+ /* background-color: white; */
+ /* border: 60px; */
+ border-color: black;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+
+/* padding: 30px; */
+/* margin: 20px; */
+}
+
+
+.card{
+
+  /* padding: 30px;
+margin: 20px;
+border: white; */
+background-color: aliceblue;
+width: 100px;
+height: 60px;
+  border: 15px ;
+  border-color: aliceblue;
+  padding: 30px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ text-overflow: ellipsis;
+
+
+
+
+}

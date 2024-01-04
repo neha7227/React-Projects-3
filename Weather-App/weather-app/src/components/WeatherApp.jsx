@@ -28,7 +28,7 @@ const WeatherApp = () => {
 
       setLoading(false);
     } catch (error) {
-      console.error("Failed to fetch weather data", error);
+      console.error("Failed to fetch weather data");
       setLoading(false);
       alert("Failed to fetch weather data");
     }

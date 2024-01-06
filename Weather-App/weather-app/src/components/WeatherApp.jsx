@@ -13,10 +13,17 @@ const WeatherApp = () => {
       // Replace 'YOUR_API_KEY' in the API URL with the actual key
       const apiKey = "9804e9cad3c445f7aac181707232709";
       const response = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`
+        `https://api1.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`
       );
       //`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`
-
+      console.log(
+        response.ok,
+        response.status,
+        response.text,
+        response,
+        "response.ok, resp.status"
+      );
+      console.log(`Failed to fetch weather data. Status: ${response.status}`);
       if (!response.ok) {
         // Check if the response status is not OK (e.g., 404, 500, etc.)
         const errorMessage = await response.text();
@@ -38,8 +45,8 @@ const WeatherApp = () => {
 
       setLoading(false);
     } catch (error) {
-      // console.error("Failed to fetch weather data");
-      console.error("Failed to fetch weather data", error.message);
+      console.error("Failed to fetch weather data");
+      // console.error("Failed to fetch weather data", error.message);
       setLoading(false);
       alert("Failed to fetch weather data");
     }

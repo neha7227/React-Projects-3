@@ -17,6 +17,14 @@ const WeatherApp = () => {
       );
       //`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`
 
+      if (!response.ok) {
+        // Check if the response status is not OK (e.g., 404, 500, etc.)
+        const errorMessage = await response.text();
+        throw new Error(
+          `Failed to fetch weather data. Status: ${response.status}. ${errorMessage}`
+        );
+      }
+
       const data = await response.json();
 
       const currentDay = data.forecast.forecastday[0].day;
@@ -30,7 +38,8 @@ const WeatherApp = () => {
 
       setLoading(false);
     } catch (error) {
-      console.error("Failed to fetch weather data");
+      // console.error("Failed to fetch weather data");
+      console.error("Failed to fetch weather data", error.message);
       setLoading(false);
       alert("Failed to fetch weather data");
     }

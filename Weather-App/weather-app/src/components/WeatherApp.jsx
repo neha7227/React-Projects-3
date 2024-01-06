@@ -13,8 +13,10 @@ const WeatherApp = () => {
       // Replace 'YOUR_API_KEY' in the API URL with the actual key
       const apiKey = "9804e9cad3c445f7aac181707232709";
       const response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`
+        `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`
       );
+      //`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1&aqi=no&alerts=no`
+
       const data = await response.json();
 
       const currentDay = data.forecast.forecastday[0].day;
